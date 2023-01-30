@@ -7,9 +7,9 @@ const arrs = [
 ];
 
 const masks = [
-  "/src/assets/rothkomask1.png",
-  "/src/assets/rothkomask3.png",
-  "/src/assets/rothkomask2.png",
+  "/src/images/rothkomask1.png",
+  "/src/images/rothkomask3.png",
+  "/src/images/rothkomask2.png",
 ];
 
 const blendMode = ["difference", "darken", "lighten", "luminosity", "multiply"];
@@ -67,7 +67,6 @@ function App() {
           gap: `${gap}rem`,
           flexDirection: `${column}`,
           backgroundColor: `#${color}`,
-          // opacity: `${opacity}` 
         }}
       >
         <div
