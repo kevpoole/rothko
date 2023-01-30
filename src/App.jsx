@@ -7,9 +7,9 @@ const arrs = [
 ];
 
 const masks = [
-  "/src/images/rothkomask1.png",
-  "/src/images/rothkomask3.png",
-  "/src/images/rothkomask2.png",
+  "/images/rothkomask1.png",
+  "/images/rothkomask3.png",
+  "/images/rothkomask2.png",
 ];
 
 const blendMode = ["difference", "darken", "lighten", "luminosity", "multiply"];
