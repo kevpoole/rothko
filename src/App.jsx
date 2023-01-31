@@ -33,10 +33,12 @@ const masks = [
 const stripes = [
   "/images/rothkostripe.png",
   "/images/rothkostripe2.png",
-  "",
-  "",
   "/images/rothkostripe3.png",
 ];
+
+const stripeClassName = [
+  "stripe", "blank"
+]
 
 const blendMode = [ "multiply"];
 
@@ -56,6 +58,7 @@ function App() {
   const [blend2, setBlend2] = useState("");
   const [mask, setMask] = useState(masks[0]);
   const [mask2, setMask2] = useState(masks[0]);
+  const [stripeClass, setStripeClass] = useState()
 
   // const randColor = () => Math.random().toString(16).substring(2, 8);
 
@@ -80,6 +83,7 @@ function App() {
     setWidth(getRndInteger(85, 98));
     setWidth2(getRndInteger(80, 100));
     setStripe(stripes[getRndInteger(0, stripes.length - 1)]);
+    setStripeClass(stripeClassName[getRndInteger(0, 1)])
   }
 
   return (
@@ -99,7 +103,7 @@ function App() {
         >
           <img src={mask2} alt="" />
         </div>
-        <div className="stripe">
+        <div className={stripeClass}>
           <img src={stripe} alt="" />
         </div>
         <div

@@ -40,6 +40,7 @@
   height: 100%;
 }
 .stripe {
+  outline: none;
   transition: 0.1s linear;
   width: 90%;
   margin: -3rem;
