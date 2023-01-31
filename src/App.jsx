@@ -12,7 +12,7 @@ const masks = [
   "/images/rothkomask2.png",
 ];
 
-const blendMode = ["difference", "darken", "lighten", "luminosity", "multiply"];
+const blendMode = [ "darken", "lighten", "luminosity", "multiply"];
 
 const flex = ["column", "column-reverse"];
 
@@ -37,22 +37,24 @@ function App() {
   function getRndInteger(min, max) {
     return Math.round(Math.random() * (max - min) + min);
   }
-  const randColor = () => Math.random().toString(16).substring(2, 8);
+  // const randColor = () => Math.random().toString(16).substring(2, 8);
 
-  const randOpacity = () => (Math.random() * 5000).toString(16).substring(6, 8);
+
+
+  // const randOpacity = () => (Math.random() * 5000).toString(16).substring(6, 8);
 
   function handleRothko() {
     setFields(arrs[getRndInteger(0, 1)]);
-    setColor(randColor);
-    setColor2(randColor);
-    setOpacity(randOpacity);
+    setColor(`${getRndInteger(0, 255)}, 0, ${getRndInteger(0, 255)}`);
+    // setColor2(randColor);
+    // setOpacity(getRndInteger(0, 1));
     setHeight(getRndInteger(5, 70));
     setHeight2(getRndInteger(5, 100));
     setHeight3(getRndInteger(50, 80));
     setColumn(flex[getRndInteger(0, 1)]);
     setGap(getRndInteger(0, 1));
-    setBlend(blendMode[getRndInteger(0, 4)]);
-    setBlend2(blendMode[getRndInteger(0, 4)]);
+    setBlend(blendMode[getRndInteger(0, 3)]);
+    setBlend2(blendMode[getRndInteger(0, 3)]);
     setMask(masks[getRndInteger(0, 2)]);
     setMask2(masks[getRndInteger(0, 1)]);
     setWidth(getRndInteger(85, 98));
@@ -66,7 +68,7 @@ function App() {
         style={{
           gap: `${gap}rem`,
           flexDirection: `${column}`,
-          backgroundColor: `#${color}`,
+          backgroundColor: `rgb(${color})`,
         }}
       >
         <div
