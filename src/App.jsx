@@ -41,12 +41,12 @@ const stripeClassName = ["stripe", "blank"];
 const flex = ["column", "column-reverse"];
 
 function App() {
-  const [color, setColor] = useState();
+  const [color, setColor] = useState(`#bb4c05`);
   const [fields, setFields] = useState(arrs[1]);
   const [height, setHeight] = useState({ one: 100, two: 100 });
   const [width, setWidth] = useState({ one: 100, two: 100 });
   const [column, setColumn] = useState(flex[0]);
-  const [mask, setMask] = useState({ one: masks[2], two: masks[0], three: masks[1] });
+  const [mask, setMask] = useState({ one: masks[3], two: masks[0], three: masks2[1] });
   const [stripe, setStripe] = useState();
   const [stripeClass, setStripeClass] = useState();
 
