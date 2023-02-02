@@ -30,10 +30,10 @@ const flex = ["column", "column-reverse"];
 function App() {
   const [color, setColor] = useState();
   const [fields, setFields] = useState(arrs[1]);
-  const [height, setHeight] = useState({one: 100, two: 100 });
-  const [width, setWidth] = useState({one: 100, two: 100,});
+  const [height, setHeight] = useState({ one: 100, two: 100 });
+  const [width, setWidth] = useState({ one: 100, two: 100 });
   const [column, setColumn] = useState(flex[0]);
-  const [mask, setMask] = useState({ one: masks[0], two: masks[1] });
+  const [mask, setMask] = useState({ one: masks[2], two: masks[0] });
   const [stripe, setStripe] = useState();
   const [stripeClass, setStripeClass] = useState();
 
@@ -47,12 +47,11 @@ function App() {
     });
     setColor(
       `rgb(${getRndInteger(0, 255)}, 
-      ${getRndInteger(0, 100)}, 
-      ${getRndInteger(0, 255)})`
+           ${getRndInteger(0, 100)}, 
+           ${getRndInteger(0, 255)})`
     );
-    setHeight({one: getRndInteger(5, 70), two: getRndInteger(50, 80)});
-    setWidth({one: getRndInteger(75, 90),two: getRndInteger(80, 100),
-    });
+    setHeight({ one: getRndInteger(5, 70), two: getRndInteger(50, 80) });
+    setWidth({ one: getRndInteger(75, 90), two: getRndInteger(80, 100) });
     setColumn(flex[getRndInteger(0, 1)]);
     setStripe(stripes[getRndInteger(0, stripes.length - 1)]);
     setStripeClass(stripeClassName[getRndInteger(0, 1)]);
@@ -68,7 +67,7 @@ function App() {
         }}
       >
         <div className={fields[0]}>
-          <img src={mask.two} alt="" />
+          <img src={mask.two} alt="shape" />
         </div>
         <div className={stripeClass}>
           <img src={stripe} alt="" />
@@ -80,7 +79,7 @@ function App() {
             width: `${width.one}%`,
           }}
         >
-          <img src={mask.one} alt="" />
+          <img src={mask.one} alt="shape" />
         </div>
 
         <div
@@ -90,7 +89,7 @@ function App() {
             width: `${width.two}%`,
           }}
         >
-          <img src={mask.one} alt="" />
+          <img src={mask.one} alt="shape" />
         </div>
       </div>
       <button onClick={handleRothko}>rothko me</button>
